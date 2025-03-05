@@ -1,5 +1,7 @@
 package org.example.ArrayString;
 
+/* https://leetcode.com/problems/gas-station/description/?envType=study-plan-v2&envId=top-interview-150 */
+
 public class GasStation {
     public static int canCompleteCircuit(int[] gas, int[] cost) {
         int n = gas.length;
@@ -16,7 +18,7 @@ public class GasStation {
             }
 
         }
-        return totalSurplus > 0 ? start : -1;
+        return totalSurplus >= 0 ? start : -1;
     }
 
     public static void main(String[] args) {
