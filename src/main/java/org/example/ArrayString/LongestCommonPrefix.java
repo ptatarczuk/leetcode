@@ -2,7 +2,26 @@ package org.example.ArrayString;
 
 import java.util.Arrays;
 
+/* https://leetcode.com/problems/longest-common-prefix/?envType=study-plan-v2&envId=top-interview-150 */
+
 public class LongestCommonPrefix {
+    public static String longestCommonPrefixPractice(String[] str) {
+        return "";
+
+
+
+
+
+
+
+
+    }
+    public static void main(String[] args) {
+        String[] str = {"flower", "flow", "flight"};
+
+        //System.out.println(longestCommonPrefix(str));
+        System.out.println(longestCommonPrefixPractice(str));
+    }
     public static String longestCommonPrefix(String[] str) {
         StringBuilder result = new StringBuilder();
         Arrays.sort(str);
@@ -18,9 +37,5 @@ public class LongestCommonPrefix {
         }
         return result.toString();
     }
-    public static void main(String[] args) {
-        String[] str = {"flower", "flow", "flight"};
 
-        System.out.println(longestCommonPrefix(str));
-    }
 }

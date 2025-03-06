@@ -5,6 +5,23 @@ import java.util.Arrays;
 /* https://leetcode.com/problems/rotate-array/description/?envType=study-plan-v2&envId=top-interview-150 */
 
 public class RotateArray {
+    public static void rotatePractice(int[] nums, int k) {
+
+
+
+
+
+
+
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {1,2,3,4,5,6,7};
+        int k = 8;
+
+        rotate(nums,k);
+        System.out.println(Arrays.toString(nums));
+    }
     public static void rotate(int[] nums, int k) {
         k = k % nums.length;
 
@@ -21,13 +38,7 @@ public class RotateArray {
             end--;
         }
     }
-    public static void main(String[] args) {
-        int[] nums = {1,2,3,4,5,6,7};
-        int k = 8;
 
-        rotate(nums,k);
-        System.out.println(Arrays.toString(nums));
-    }
 }
 
 /*

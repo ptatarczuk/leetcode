@@ -5,6 +5,24 @@ import java.util.Map;
 
 /* https://leetcode.com/problems/roman-to-integer/?envType=study-plan-v2&envId=top-interview-150 */
 public class RomanToInteger {
+    public static int romanToIntPractice(String s) {
+
+        return -1;
+
+
+
+
+
+
+
+    }
+
+    public static void main(String[] args) {
+        String s = "MCMXCIV";
+        //System.out.println(romanToInt(s));
+        //System.out.println(romanToIntSwitch(s));
+        System.out.println(romanToIntPractice(s));
+    }
     public static int romanToInt(String s) {
         Map<Character, Integer> map = new HashMap<>();
         map.put('I', 1);
@@ -65,11 +83,5 @@ public class RomanToInteger {
             default:
                 return 0;
         }
-    }
-
-    public static void main(String[] args) {
-        String s = "MCMXCIV";
-        System.out.println(romanToInt(s));
-        System.out.println(romanToIntSwitch(s));
     }
 }

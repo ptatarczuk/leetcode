@@ -2,7 +2,25 @@ package org.example.ArrayString;
 
 import java.util.Arrays;
 
+/* https://leetcode.com/problems/product-of-array-except-self/?envType=study-plan-v2&envId=top-interview-150 */
+
 public class ProductOfArrayExceptSelf {
+
+    public static int[] productExceptSelfPractice(int[] nums) {
+        return nums;
+
+
+
+
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {1,2,3,4,5};
+
+        //System.out.println(Arrays.toString(productExceptSelfBruteforce(nums)));
+        //System.out.println(Arrays.toString(productExceptSelf(nums)));
+        System.out.println(Arrays.toString(productExceptSelfPractice(nums)));
+    }
 
     // bruteforce solution with 0(n*n) time complexity, needs to be refactored
     public static int[] productExceptSelfBruteforce(int[] nums) {
@@ -46,14 +64,6 @@ public class ProductOfArrayExceptSelf {
             result[i]=prefix[i]*suffix[i];
         }
         return result;
-    }
-
-    public static void main(String[] args) {
-        int[] nums = {1,2,3,4,5};
-
-        System.out.println(Arrays.toString(productExceptSelfBruteforce(nums)));
-        System.out.println(Arrays.toString(productExceptSelf(nums)));
-
     }
 }
 
