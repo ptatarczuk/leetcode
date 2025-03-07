@@ -3,6 +3,26 @@ package org.example.ArrayString;
 /* https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/?envType=study-plan-v2&envId=top-interview-150 */
 
 public class BestTimeToBuyAndSellStockII {
+    public static int maxProfitPractice(int[] prices) {
+        return -1;
+
+
+
+
+
+
+
+
+
+
+
+    }
+    public static void main(String[] args) {
+        int[] nums = {7,1,5,3,6,4};
+
+        //System.out.println(maxProfit(nums));
+        System.out.println(maxProfitPractice(nums));
+    }
     public static int maxProfit(int[] prices) {
         int profit = 0;
 
@@ -13,9 +33,5 @@ public class BestTimeToBuyAndSellStockII {
         }
         return profit;
     }
-    public static void main(String[] args) {
-        int[] nums = {7,1,5,3,6,4};
 
-        System.out.println(maxProfit(nums));
-    }
 }

@@ -14,6 +14,9 @@ public class MajorityElement {
 
 
 
+
+
+
     }
     public static void main(String[] args) {
         int[] nums = {3,3,2,2,3};

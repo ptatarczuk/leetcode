@@ -3,6 +3,27 @@ package org.example.ArrayString;
 /* https://leetcode.com/problems/gas-station/description/?envType=study-plan-v2&envId=top-interview-150 */
 
 public class GasStation {
+    public static int canCompleteCircuitPractice(int[] gas, int[] cost) {
+        return -1;
+
+
+
+
+
+
+
+
+
+
+    }
+    public static void main(String[] args) {
+        int[] gas = {1,2,3,4,5};
+        int[] cost = {3,4,5,1,1};
+
+        //System.out.println(canCompleteCircuit(gas,cost));
+        System.out.println(canCompleteCircuitPractice(gas,cost));
+    }
+
     public static int canCompleteCircuit(int[] gas, int[] cost) {
         int n = gas.length;
         int totalSurplus = 0;
@@ -21,10 +42,5 @@ public class GasStation {
         return totalSurplus >= 0 ? start : -1;
     }
 
-    public static void main(String[] args) {
-        int[] gas = {1,2,3,4,5};
-        int[] cost = {3,4,5,1,1};
 
-        System.out.println(canCompleteCircuit(gas,cost));
-    }
 }

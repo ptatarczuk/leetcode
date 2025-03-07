@@ -19,7 +19,7 @@ public class RotateArray {
         int[] nums = {1,2,3,4,5,6,7};
         int k = 8;
 
-        rotate(nums,k);
+        rotatePractice(nums,k);
         System.out.println(Arrays.toString(nums));
     }
     public static void rotate(int[] nums, int k) {
