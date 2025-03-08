@@ -1,18 +1,37 @@
 package org.example.Hashmap;
 
 import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class RansomNote {
+    public static boolean canConstructPractice(String ransomNote, String magazine) {
+        return false;
+
+
+
+
+
+
+
+
+
+
+    }
 
     public static void main(String[] args) {
         String ransomNote = "aa";
-        String magazine = "ab";
+        String magazine = "aab";
 
-        System.out.println(canConstruct(ransomNote, magazine));
+        //System.out.println(canConstruct(ransomNote, magazine));
+        System.out.println(canConstructPractice(ransomNote, magazine));
     }
+
     public static boolean canConstruct(String ransomNote, String magazine) {
         HashMap<Character, Integer> dictionary = new HashMap<>();
 
+        
+        
         for (int i = 0; i < magazine.length(); i++) {
             char c = magazine.charAt(i);
 
@@ -33,5 +52,16 @@ public class RansomNote {
             }
         }
         return true;
+    }
+
+    public boolean canConstructStream(String ransomNote, String magazine) {
+        Map<Character, Long> letterCount = magazine.chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
+
+        return ransomNote.chars()
+                .mapToObj(c -> (char) c)
+                .allMatch(c -> letterCount.containsKey(c) && letterCount.put(c, letterCount.get(c) - 1) > 0);
+
     }
 }
