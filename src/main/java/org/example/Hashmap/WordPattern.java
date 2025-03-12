@@ -16,11 +16,7 @@ public class WordPattern {
 
 
 
-
-
     }
-
-
 
     public static void main(String[] args) {
         String pattern = "abba";
