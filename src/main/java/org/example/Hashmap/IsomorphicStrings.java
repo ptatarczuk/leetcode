@@ -5,16 +5,16 @@ import java.util.HashMap;
 
 public class IsomorphicStrings {
     public static boolean isIsomorphicPractice(String s, String t) {
-
-
-
-
-
-
-
-
-
         return true;
+
+
+
+
+
+
+
+
+
     }
     public static void main(String[] args) {
         String s = "egg";
