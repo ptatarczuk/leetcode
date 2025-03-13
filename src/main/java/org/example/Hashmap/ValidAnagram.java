@@ -21,7 +21,8 @@ public class ValidAnagram {
         String s = "anagram";
         String t = "nagaram";
 
-        System.out.println(isAnagram(s, t));
+        //System.out.println(isAnagram(s, t));
+        System.out.println(isAnagramPractice(s, t));
     }
     public static boolean isAnagram(String s, String t) {
         char[] sChars = s.toCharArray();
