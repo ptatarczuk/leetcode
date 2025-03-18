@@ -5,16 +5,27 @@ import java.util.HashSet;
 /* https://leetcode.com/problems/happy-number/description/?envType=study-plan-v2&envId=top-interview-150 */
 public class HappyNumber {
     public static boolean isHappyPractice(int n) {
-        return false;
+        HashSet seenNumbers = new HashSet();
 
+        if (n != 1 && !seenNumbers.contains(n)) {
+            seenNumbers.add(n);
+            n = sum(n);
+        }
+        return n == 1;
     }
-    private static int sum(int num) {
 
-        return 0;
+        private static int sum(int num) {
+            int sum = 0;
+            while (num > 0) {
+            int digit = num % 10;
+            sum += digit * digit;
+            num /= 10;
+        }
+        return sum;
     }
 
     public static void main(String[] args) {
-        int n = 13;
+        int n = 12;
 
         System.out.println(isHappy(n));
     }

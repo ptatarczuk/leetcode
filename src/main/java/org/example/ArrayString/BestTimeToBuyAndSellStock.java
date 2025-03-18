@@ -4,12 +4,15 @@ package org.example.ArrayString;
 
 public class BestTimeToBuyAndSellStock {
     public static int maxProfitPractice(int[] prices) {
-        return -1;
+        int minPrice = prices[0];
+        int profit = 0;
 
-
-
-
-
+        for (int i = 0; i < prices.length ; i++) {
+            minPrice = Math.min(minPrice, prices[i]);
+            profit = Math.max(profit, prices[i] - minPrice);
+            
+        }
+        return profit;
 
 
 

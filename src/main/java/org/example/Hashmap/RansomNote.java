@@ -8,10 +8,29 @@ import java.util.stream.Collectors;
 
 public class RansomNote {
     public static boolean canConstructPractice(String ransomNote, String magazine) {
-        return false;
+        if (magazine.length() == 0) return false;
 
+        HashMap<Character, Integer> map = new HashMap<>();
 
+        for (int i = 0; i < magazine.length(); i++) {
+            char c = magazine.charAt(i);
 
+            if (!map.containsKey(c)) {
+                map.put(c, 1);
+            } else {
+                map.put(c, map.get(c) + 1);
+            }
+        }
+        for (int i = 0; i < ransomNote.length(); i++) {
+            char c = ransomNote.charAt(i);
+
+            if (map.containsKey(c) && map.get(c) > 0) {
+                map.put(c, map.get(c) - 1);
+            } else {
+                return false;
+            }
+        }
+        return true;
 
 
 
@@ -21,7 +40,7 @@ public class RansomNote {
     }
 
     public static void main(String[] args) {
-        String ransomNote = "aa";
+        String ransomNote = "aaa";
         String magazine = "aab";
 
         //System.out.println(canConstruct(ransomNote, magazine));

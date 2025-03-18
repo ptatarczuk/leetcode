@@ -5,8 +5,14 @@ import java.util.Arrays;
 
 public class ValidAnagram {
     public static boolean isAnagramPractice(String s, String t) {
-        return false;
 
+        char[] sChar = s.trim().toCharArray();
+        char[] tChar = t.trim().toCharArray();
+
+        Arrays.sort(sChar);
+        Arrays.sort(tChar);
+
+        return Arrays.equals(sChar, tChar);
 
 
 
@@ -18,7 +24,7 @@ public class ValidAnagram {
     }
 
     public static void main(String[] args) {
-        String s = "anagram";
+        String s = "anegram";
         String t = "nagaram";
 
         //System.out.println(isAnagram(s, t));

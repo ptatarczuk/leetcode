@@ -1,5 +1,6 @@
 package org.example.Hashmap;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,18 +18,36 @@ public class ContainsDuplicateII {
         int k = 3;
 
         System.out.println(containsNearbyDuplicatePractice(nums, k));
-        System.out.println(containsNearbyDuplicate(nums, k));
+        System.out.println(containsNearbyDuplicateSlidingWindow(nums, k));
     }
-    public static boolean containsNearbyDuplicate(int[] nums, int k) {
+    public static boolean containsNearbyDuplicateSlidingWindow(int[] nums, int k) {
         if (k == 0) return false;
 
         Set<Integer> slidingWindow = new HashSet<>();
-        for (int index = 0; index < nums.length; index++) {
-            if (slidingWindow.contains(nums[index]))
+        for (int i = 0; i < nums.length; i++) {
+            if (slidingWindow.contains(nums[i]))
                 return true;
-            if (index >= k)
-                slidingWindow.remove(nums[index - k]);
-            slidingWindow.add(nums[index]);
+            if (i >= k)
+                slidingWindow.remove(nums[i - k]);
+            slidingWindow.add(nums[i]);
+        }
+        return false;
+    }
+
+    public static boolean containsNearbyDuplicate(int[] nums, int k) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            if (!map.containsKey(nums[i])) {
+                map.put(nums[i], i);
+            } else {
+                int diff = Math.abs(map.get(nums[i]) - 1);
+                if (diff <= k) {
+                    return true;
+                } else {
+                    map.put(nums[i], i);
+                }
+            }
         }
         return false;
     }
