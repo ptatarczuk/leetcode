@@ -6,14 +6,7 @@ import java.util.Arrays;
 public class ValidAnagram {
     public static boolean isAnagramPractice(String s, String t) {
 
-        char[] sChar = s.trim().toCharArray();
-        char[] tChar = t.trim().toCharArray();
-
-        Arrays.sort(sChar);
-        Arrays.sort(tChar);
-
-        return Arrays.equals(sChar, tChar);
-
+        return false;
 
 
 

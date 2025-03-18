@@ -11,6 +11,7 @@ public class ContainsDuplicateII {
 
 
 
+
         return false;
     }
     public static void main(String[] args) {
@@ -19,6 +20,7 @@ public class ContainsDuplicateII {
 
         System.out.println(containsNearbyDuplicatePractice(nums, k));
         System.out.println(containsNearbyDuplicateSlidingWindow(nums, k));
+        System.out.println(containsNearbyDuplicate(nums, k));
     }
     public static boolean containsNearbyDuplicateSlidingWindow(int[] nums, int k) {
         if (k == 0) return false;
@@ -41,7 +43,7 @@ public class ContainsDuplicateII {
             if (!map.containsKey(nums[i])) {
                 map.put(nums[i], i);
             } else {
-                int diff = Math.abs(map.get(nums[i]) - 1);
+                int diff = Math.abs(i - map.get(nums[i])); // abs not required, next index is always bigger
                 if (diff <= k) {
                     return true;
                 } else {

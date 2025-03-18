@@ -5,25 +5,8 @@ import java.util.HashMap;
 
 public class IsomorphicStrings {
     public static boolean isIsomorphicPractice(String s, String t) {
-        if (s.length() != t.length()) return false;
-        HashMap<Character, Character> map = new HashMap<>();
 
-        for (int i = 0; i < s.length() ; i++) {
-            char sChar = s.charAt(i);
-            char tChar = t.charAt(i);
-
-            if (!map.containsKey(sChar)) {
-                if (!map.containsValue(tChar)) {
-                    map.put(sChar, tChar);
-                } else {
-                    return false;
-                }
-            } else if (map.get(sChar) != tChar) {
-                return false;
-            }
-        }
-        return true;
-
+        return false;
 
 
 

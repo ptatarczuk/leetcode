@@ -4,14 +4,7 @@ package org.example.ArrayString;
 public class JumpGame {
     public static boolean canJumpPractice(int[] nums) {
 
-        int finalPosition = nums.length -1;
-
-        for (int i = nums.length -2; i >= 0 ; i--) {
-            if (i + nums[i] >= finalPosition) {
-                finalPosition = i;
-            }
-        }
-        return finalPosition == 0;
+        return false;
 
 
 

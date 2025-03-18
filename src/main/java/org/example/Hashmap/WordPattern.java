@@ -7,26 +7,8 @@ import java.util.Map;
 
 public class WordPattern {
     public static boolean wordPatternPractice(String pattern, String s) {
-        String[] split = s.trim().split("\\s+");
-        if (pattern.length() != split.length) return false;
 
-        HashMap<Character, String> map = new HashMap<>();
-
-        for (int i = 0; i < split.length; i++) {
-            char c = pattern.charAt(i);
-
-            if (!map.containsKey(c)) {
-                if (!map.containsValue(split[i])) {
-                    map.put(c, split[i]);
-                } else {
-                    return false;
-                }
-            } else if (!map.get(c).equals(split[i])) {
-                return false;
-            }
-        }
-        return true;
-
+        return false;
 
 
 
@@ -37,8 +19,8 @@ public class WordPattern {
     }
 
     public static void main(String[] args) {
-        String pattern = "abab";
-        String s = "dog cat dog cat";
+        String pattern = "abba";
+        String s = "dog cat cat dog";
 
         System.out.println(wordPatternPractice(pattern, s));
         //System.out.println(wordPattern(pattern, s));
