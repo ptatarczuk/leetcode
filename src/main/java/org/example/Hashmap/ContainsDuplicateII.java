@@ -6,8 +6,22 @@ import java.util.Set;
 
 public class ContainsDuplicateII {
     public static boolean containsNearbyDuplicatePractice(int[] nums, int k) {
+        if (k == 0) return false;
+
+        HashSet<Integer> window = new HashSet<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            if (window.contains(nums[i])) {
+                return true;
+            } else {
+                if (i >= k) window.remove(nums[i - k]);
+                window.add(nums[i]);
+            }
+        }
 
 
+        // 1,2,3,4,1,2,3,1  k= 3
+        //         [     ]
 
 
 
