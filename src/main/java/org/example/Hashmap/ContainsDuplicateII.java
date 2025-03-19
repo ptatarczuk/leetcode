@@ -4,24 +4,15 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
+/* https://leetcode.com/problems/contains-duplicate-ii/?envType=study-plan-v2&envId=top-interview-150 */
+
 public class ContainsDuplicateII {
     public static boolean containsNearbyDuplicatePractice(int[] nums, int k) {
-        if (k == 0) return false;
-
-        HashSet<Integer> window = new HashSet<>();
-
-        for (int i = 0; i < nums.length; i++) {
-            if (window.contains(nums[i])) {
-                return true;
-            } else {
-                if (i >= k) window.remove(nums[i - k]);
-                window.add(nums[i]);
-            }
-        }
 
 
-        // 1,2,3,4,1,2,3,1  k= 3
-        //         [     ]
+
+
+
 
 
 
