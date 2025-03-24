@@ -1,8 +1,11 @@
 package org.example.TwoPointers;
 
+/* https://leetcode.com/problems/valid-palindrome/?envType=study-plan-v2&envId=top-interview-150 */
+
 public class ValidPalindrome {
     public static boolean isPalindromePractice(String s) {
         return false;
+
 
 
 
@@ -16,6 +19,8 @@ public class ValidPalindrome {
         String a = "A man, a plan, a canal: Panama";
         String b = "race car";
 
+        System.out.println(isPalindromePractice(a));
+        System.out.println(isPalindromePractice(b));
         System.out.println(isPalindrome(a));
         System.out.println(isPalindrome(b));
     }
