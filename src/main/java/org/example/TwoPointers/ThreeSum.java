@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/* https://leetcode.com/problems/3sum/description/?envType=study-plan-v2&envId=top-interview-150 */
+
 public class ThreeSum {
     public static List<List<Integer>> threeSumPractice(int[] nums) {
 
