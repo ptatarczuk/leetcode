@@ -1,8 +1,10 @@
 package org.example.LinkedList;
 
+/* https://leetcode.com/problems/merge-two-sorted-lists/description/?envType=study-plan-v2&envId=top-interview-150 */
+
 public class MergeTwoSortedLists {
     public static ListNode mergeTwoListsPractice(ListNode list1, ListNode list2) {
-        return list1;
+        return new ListNode(0);
 
 
 
@@ -23,7 +25,7 @@ public class MergeTwoSortedLists {
         list2.next = new ListNode(3);
         list2.next.next = new ListNode(4);
 
-        ListNode mergedList = mergeTwoListsPractice(list1, list2);
+        ListNode mergedList = mergeTwoLists(list1, list2);
         System.out.println("Połączona lista: " + mergedList.val + " -> " + mergedList.next.val + " -> " + mergedList.next.next.val + " -> " + mergedList.next.next.next.val + " -> " + mergedList.next.next.next.next.val + " -> " + mergedList.next.next.next.next.next.val);
 
     }
